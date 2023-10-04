@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "add.h"
-#include "sub.h"
 #include "mul.h"
+#include "mod.h"
 #include "div.h"
 
 int main() {
@@ -9,8 +9,8 @@ int main() {
 
     printf("Simple Calculator\n");
     printf("1. Addition\n");
-    printf("2. Subtraction\n");
-    printf("3. Multiplication\n");
+    printf("2. Multiplication\n");
+    printf("3. Modulo\n");
     printf("4. Division\n");
     printf("Enter your choice (1/2/3/4): ");
     int choice;
@@ -25,11 +25,11 @@ int main() {
             printf("Result: %.2lf\n", result);
             break;
         case 2:
-            result = subtract(num1, num2);
+            result = multiply(num1, num2);
             printf("Result: %.2lf\n", result);
             break;
         case 3:
-            result = multiply(num1, num2);
+            result = modulo(num1, num2);
             printf("Result: %.2lf\n", result);
             break;
         case 4:
@@ -44,5 +44,4 @@ int main() {
 
     return 0;
 }
-
 
